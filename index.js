@@ -8,8 +8,10 @@ app.get("/", (req, res) => {
         var one=0;
         var two=0;
         var three=0;
-        // console.log(res)
         var list=res.data;
+        console.log(list.length-1) 
+        var minmoney =list[list.length-1].iTicket
+        // console.log(res)
         for(var i=0;i<list.length;i++){
             sumcount=sumcount+Number(list[i].iTicket);
             if(i==0){
@@ -30,7 +32,8 @@ app.get("/", (req, res) => {
           </head>
           <body style=" text-align: center; margin-top: 15%;">
             <h1>总金额:`+sumcount+`</h1><br><br>
-            <h3>No.1 `+one+`&nbsp;&nbsp;No.2 `+two+`&nbsp;&nbsp;No.3 `+three+`</h3><br>
+            <h3>No.1 `+one+`&nbsp;&nbsp;No.2 `+two+`&nbsp;&nbsp;No.3 `+three+`</h3>
+            <h6>最低充值`+minmoney+`(第一千名充值金额)有概率入榜</h6><br>
             <h6>本页面将于活动结束后下线</h6><br>
             <h7>本页面为排行榜数据仅统计上榜数据,未上榜富哥无法统计</h7>
           </body>
