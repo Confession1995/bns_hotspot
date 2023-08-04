@@ -1,0 +1,10 @@
+{
+    "name": "bns_hotspot",
+    "version": "1.0.0",
+    "description": "A tool for bns_hotspot.",
+    "main": "index.js",
+    "dependencies": {
+      "axios": "^1.3.4",
+      "express": "^4.18.1"
+    }
+  }
